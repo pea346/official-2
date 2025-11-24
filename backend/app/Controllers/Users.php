@@ -25,4 +25,9 @@ class Users extends BaseController
         // return the landing view
         return view('user/moodboard');
     }
+    public function roadmap(): string
+    {
+        // return the landing view
+        return view('user/roadmap');
+    }
 }
