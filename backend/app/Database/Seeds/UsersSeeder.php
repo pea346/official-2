@@ -13,11 +13,12 @@ class UsersSeeder extends Seeder
         $usersData = [
             [
                 'firstName' => 'John',
-                'middleName' => 'S.',
                 'lastName' => 'Doe',
                 'email' => 'johndoe@gmail.com',
                 'password' => password_hash('jodo123!', PASSWORD_DEFAULT),
                 'type' => 'manager',
+                'account_status' => 1,
+                'email_activated' => 1,
                 'createdAt' => $now,
                 'updatedAt' => $now,
             ],
@@ -28,6 +29,8 @@ class UsersSeeder extends Seeder
                 'email' => 'janesmith@gmail.com',
                 'password' => password_hash('jasm123!', PASSWORD_DEFAULT),
                 'type' => 'client',
+                'account_status' => 1,
+                'email_activated' => 1,
                 'createdAt' => $now,
                 'updatedAt' => $now,
             ]
