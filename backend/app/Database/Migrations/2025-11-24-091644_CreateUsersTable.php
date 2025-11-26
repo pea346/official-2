@@ -21,11 +21,6 @@ class CreateUsersTable extends Migration
                 'constraint'     => 100,
                 'null'           => false,
             ],
-            'middleName' => [
-                'type'           => 'VARCHAR',
-                'constraint'     => 100,
-                'null'           => true,
-            ],
             'lastName' => [
                 'type'           => 'VARCHAR',
                 'constraint'     => 100,
@@ -44,6 +39,18 @@ class CreateUsersTable extends Migration
             'type' => [
                 'type'           => 'VARCHAR',
                 'constraint'     => 20,
+                'null'           => false,
+            ],
+            'account_status' => [
+                'type'           => 'INT',
+                'constraint'     => 1,
+                'default'        => 1,
+                'null'           => false,
+            ],
+            'email_activated' => [
+                'type'           => 'INT',
+                'constraint'     => 1,
+                'default'        => 0,
                 'null'           => false,
             ],
             'deletedAt' => [
