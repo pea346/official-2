@@ -24,7 +24,6 @@ class UsersSeeder extends Seeder
             ],
             [
                 'firstName' => 'Jane',
-                'middleName' => 'B.',
                 'lastName' => 'Smith',
                 'email' => 'janesmith@gmail.com',
                 'password' => password_hash('jasm123!', PASSWORD_DEFAULT),
