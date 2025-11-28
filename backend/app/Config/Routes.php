@@ -50,4 +50,11 @@ $routes->group('client', ['namespace' => 'App\Controllers\Client'], function ($r
     $routes->get('menu', 'ClientController::menu');
     $routes->post('order', 'ClientController::checkout');
     $routes->get('orders', 'ClientController::orders');
+
+    // Orders management
+    $routes->post('orders/add', 'ClientController::addToOrders');
+    $routes->post('orders/confirm', 'ClientController::confirmOrders');
+    $routes->post('order/checkout', 'ClientController::checkout');
+    $routes->post('order/complete', 'ClientController::completeOrder');
+    $routes->post('orders/cancel/(:num)', 'ClientController::cancelOrder/$1');
 });
