@@ -31,4 +31,13 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->post('accounts/update/(:num)', 'AdminController::updateUser/$1');
     $routes->get('accounts/delete/(:num)', 'AdminController::deleteUser/$1');
     $routes->post('accounts/delete/(:num)', 'AdminController::deleteUser/$1');
+
+    // Menu CRUD
+    $routes->get('menu', 'AdminController::menu');
+    $routes->get('menu/create', 'AdminController::createItem');
+    $routes->post('menu/store', 'AdminController::storeItem');
+    $routes->get('menu/edit/(:num)', 'AdminController::editItem/$1');
+    $routes->post('menu/update/(:num)', 'AdminController::updateItem/$1');
+    $routes->get('menu/delete/(:num)', 'AdminController::deleteItem/$1');
+    $routes->post('menu/delete/(:num)', 'AdminController::deleteItem/$1');
 });
