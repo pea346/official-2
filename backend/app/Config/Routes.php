@@ -57,4 +57,8 @@ $routes->group('client', ['namespace' => 'App\Controllers\Client'], function ($r
     $routes->post('order/checkout', 'ClientController::checkout');
     $routes->post('order/complete', 'ClientController::completeOrder');
     $routes->post('orders/cancel/(:num)', 'ClientController::cancelOrder/$1');
+
+    // Additional routes
+    $routes->post('add-to-orders', 'ClientController::addToOrders');
+    $routes->post('complete-order', 'ClientController::completeOrder');
 });
