@@ -41,3 +41,13 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('menu/delete/(:num)', 'AdminController::deleteItem/$1');
     $routes->post('menu/delete/(:num)', 'AdminController::deleteItem/$1');
 });
+
+// ----------------- Client Routes -----------------
+$routes->group('client', ['namespace' => 'App\Controllers\Client'], function ($routes) {
+
+    // Dashboard
+    $routes->get('home', 'ClientController::home');
+    $routes->get('menu', 'ClientController::menu');
+    $routes->post('order', 'ClientController::checkout');
+    $routes->get('orders', 'ClientController::orders');
+});
