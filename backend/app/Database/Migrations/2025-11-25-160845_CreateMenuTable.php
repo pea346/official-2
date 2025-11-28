@@ -37,6 +37,12 @@ class CreateMenuTable extends Migration
                 'default'        => true,
                 'null'           => false,
             ],
+            'is_active' => [
+                'type'       => 'TINYINT',
+                'constraint' => 1,
+                'default'    => 1,
+                'null'       => false,
+            ],
             'deletedAt' => [
                 'type' => 'DATETIME',
                 'null' => true,
