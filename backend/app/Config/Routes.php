@@ -52,6 +52,11 @@ $routes->group('client', ['namespace' => 'App\Controllers\Client'], function ($r
     $routes->post('order', 'ClientController::checkout');
     $routes->get('orders', 'ClientController::orders');
 
+    // Profile
+    $routes->get('profile', 'ClientController::profile');
+    $routes->post('profile/update', 'ClientController::updateProfile');
+    $routes->post('profile/delete', 'ClientController::deleteAccount');
+
     // Orders management
     $routes->post('orders/add', 'ClientController::addToOrders');
     $routes->post('orders/confirm', 'ClientController::confirmOrders');
