@@ -33,6 +33,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->post('accounts/delete/(:num)', 'AdminController::deleteUser/$1');
 
     // Menu CRUD
+    $routes->get('orders', 'AdminController::orderRequests');
     $routes->get('menu', 'AdminController::menu');
     $routes->get('menu/create', 'AdminController::createItem');
     $routes->post('menu/store', 'AdminController::storeItem');
