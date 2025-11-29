@@ -8,13 +8,22 @@
     <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+  <h3 align="center">PizzaHot</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
+PizzaHot offers features for both clients and admins, all powered through a MySQL database and accessible via Docker.
+
+Client Features:
+
+Clients can create an account, log in, browse the pizza menu, add items to their cart, modify their orders, delete orders, and even delete their own accounts. They can also view an order summary and place orders with payment processing included. All client actions are stored in the database.
+
+Admin Features:
+
+Admins have access to an analytics dashboard and a full overview of website activity. They can view all users, all orders, check order statuses, manage pizza items (add/edit), and delete orders only once they are marked as completed. The admin can also access system logs and activity history.
+
+The system runs through Docker using docker compose up --watch, with phpMyAdmin available for database management.
 </div>
 
 <br/>
@@ -55,22 +64,42 @@ It helps teams quickly bootstrap backend + frontend projects, with simple sample
 
 ## Overview
 
-This template provides a **minimal CodeIgniter 4 project layout** with conventions for file organization, commit practices, and simple modules.
+PizzaHot is a web-based pizza ordering system built using CodeIgniter 4.
+The project’s main purpose is to provide customers with an easy way to browse pizzas, create an account, and place orders online. It also includes an admin dashboard where administrators can monitor all activity happening on the website.
 
-It is designed to be **easy to start with** and a **reference for adding new features**.
+This system is designed for two types of users:
 
-* **Purpose**: a clean starting point for CI4 apps.
-* **Audience**: developers who want a predictable structure and quick onboarding.
+Clients who want to order pizza online
+
+Admins who manage and oversee the entire platform
+
+The project is developed as a school requirement and is currently not a full production system.
 
 ### Key Components
 
-These are **sample modules** included (or suggested) for learning how to add features:
+Main Features
 
-| Component                 | Purpose                                                             | Notes                                                   |
-| ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
-| **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
-| **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+User Authentication: Sign up, log in, edit profile, delete account
+
+Online Ordering: View fixed pizza menu, add to cart, modify orders, delete orders
+
+Order Summary & Payment: Clients receive an overview before completing their order
+
+Admin Dashboard: Analytics, activity overview, system logs, and order monitoring
+
+Pizza Management (Admin): Add and edit pizza items; delete completed orders
+
+Database Integration: All data is stored, updated, and retrieved securely through MySQL
+
+Technologies Used
+
+Frontend: HTML, CSS
+
+Backend: PHP, CodeIgniter 4
+
+Database: MySQL (via phpMyAdmin)
+
+Tools: Docker, GitHub, Visual Studio Code
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 
