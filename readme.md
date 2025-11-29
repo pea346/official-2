@@ -4,8 +4,8 @@
 <br/>
 
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+  <a href="https://github.com/pea346/official-2">
+    <img src="/assets/img/logo.png" alt="logo" width="130" height="100">
   </a>
 <!-- * Title Section -->
   <h3 align="center">PizzaHot</h3>
