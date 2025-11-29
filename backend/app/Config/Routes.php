@@ -41,6 +41,16 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->post('menu/update/(:num)', 'AdminController::updateItem/$1');
     $routes->get('menu/delete/(:num)', 'AdminController::deleteItem/$1');
     $routes->post('menu/delete/(:num)', 'AdminController::deleteItem/$1');
+
+    // Orders CRUD
+    $routes->get('orders', 'AdminController::orderRequests');
+    $routes->get('orders/create', 'AdminController::createOrder');
+    $routes->post('orders/store', 'AdminController::storeOrder');
+    $routes->get('orders/edit/(:num)', 'AdminController::editOrder/$1');
+    $routes->post('orders/update/(:num)', 'AdminController::updateOrder/$1');
+    $routes->get('orders/delete/(:num)', 'AdminController::deleteOrder/$1');
+    $routes->post('orders/delete/(:num)', 'AdminController::deleteOrder/$1');
+    $routes->post('orders/complete/(:num)', 'AdminController::completeOrder/$1');
 });
 
 // ----------------- Client Routes -----------------
